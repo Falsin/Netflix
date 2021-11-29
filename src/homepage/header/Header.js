@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import RegistBox from "./regist/Regist";
+import background from "../../images/backgroundForHeader.jpg"
 
 function styledComponent({className}) {
   return (
@@ -18,6 +19,25 @@ function styledComponent({className}) {
 }
 
 const Header = styled(styledComponent)`
+  position: relative;
+  padding-top: 4vmin;
+  padding-left: 4vmin;
+  padding-right: 4vmin;
+
+  &::before {
+    content: "";
+    background-image: url(${background});
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+  }
+
   & > div {
     height: 5vmin;
     display: flex;
@@ -29,6 +49,11 @@ const Header = styled(styledComponent)`
         fill: #e50914;
       }
     }
+  }
+
+  @media screen and (min-width: 1000px) {
+    height: 100vh;
+    width: 100vw;
   }
 `
 
