@@ -13,6 +13,8 @@ function styledComponent({className}) {
         </svg>
 
         <RegistBox />
+
+        
       </div>
     </header>
   )

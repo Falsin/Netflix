@@ -8,13 +8,14 @@ import {
   signOut,
 } from 'firebase/auth';
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export default function RegistBox() {
-  initFirebaseAuth();
+  //initFirebaseAuth();
 
   return (
     <Wrapper>
-      <div id="user-pic"></div>
+      {/* <div id="user-pic"></div>
         <div id="user-name"></div>
         <button id="sign-out" onClick={() => signOutUser()}>
           Sign-out
@@ -24,7 +25,9 @@ export default function RegistBox() {
         </button>
         <button id="sign-in" onClick={() => signIn(FacebookAuthProvider)}>
           Sign-in with Facebook
-        </button>
+        </button> */}
+        <Link to="/registPage">Sign in</Link>
+        {/* <button>Sign in</button> */}
     </Wrapper>
   )
 }
@@ -32,8 +35,9 @@ export default function RegistBox() {
 const Wrapper = styled.div`
   display: flex;
   margin-left: auto;
+  align-items: center;
 
-  #user-pic {
+  /* #user-pic {
     position: relative;
     min-width: 35px;
     min-height: 35px;
@@ -46,6 +50,16 @@ const Wrapper = styled.div`
   button {
     border: solid black 1px;
     margin: 0;
+  } */
+
+  a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    background: #e50914;
+    padding: 1vmin 2vmin;
+    border-radius: 4px;
+    font-weight: 500;
   }
 `
 
