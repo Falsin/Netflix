@@ -33,7 +33,9 @@ const Wrapper = styled.header`
 
 function AuthBlockStatus(props) {
   return (
-    <div>
+    <Wrapper2 onClick={(e) => {
+      console.log(e.target.parentNode);
+    }}>
       {/* <div id="user-pic" ></div> */}
       <Picture image={props.userDate.userPicElem} />
       <div id="user-name">{props.userDate.userName}</div>
@@ -46,7 +48,7 @@ function AuthBlockStatus(props) {
         <button id="sign-in" onClick={() => signIn(FacebookAuthProvider)}>
           Sign-in with Facebook
         </button> */}
-    </div>
+    </Wrapper2>
     /* <div>
       This is Authblock
     </div> */
@@ -55,6 +57,15 @@ function AuthBlockStatus(props) {
 
 const Picture = styled.div`
   background-image: ${(props) => 'url(' + props.image + ')'};
-  height: 100px;
-  width: 100xp;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+`
+
+const Wrapper2 = styled.div`
+  display: flex;
+  align-items: center;
 `
