@@ -56,6 +56,7 @@ const Wrapper = styled.div`
   input, button {
     margin-bottom: 4vmin;
     padding: 2vmin;
+    border-radius: 2px;
   }
   
   fieldset {
@@ -64,6 +65,10 @@ const Wrapper = styled.div`
     flex-direction: column;
     position: relative;
     border: none;
+
+    button {
+      background: red;
+    }
 
     &::before {
       content: '${(props) => props.err}';
