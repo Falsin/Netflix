@@ -2,54 +2,20 @@ import styled from "styled-components";
 import { useEffect, useState } from 'react';
 import app from "../Firebase";
 import { Link } from "react-router-dom";
+import AuthBlockStatus from "./authBlockStatus/AuthBlockStatus";
 
-import {
-  getAuth,
-  signOut,
-} from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 
 export default function Header() {
-  /* useEffect(() => {
-    const manageAuth = getAuth().onAuthStateChanged((user) => {
-      if (user) {
-        return 
-      } else {
-        
-      }
-    });
-
-    return () =>  manageAuth();
-  });
- */
-
-  /* function showBtnOrUserInfo() {
-    let component;
-
-    const manageAuth = getAuth().onAuthStateChanged((user) => {
-      if (user) {
-        component =  
-      } else {
-        
-      }
-    });
-  } */
-
-  //const [userDate, setUserDate] = useState()
-  const [logOutStatus, setLogOutStatus] = useState(false);
+  const [logInStatus, setLogOutStatus] = useState(false);
 
   useEffect(() => {
     const manageAuth = getAuth().onAuthStateChanged((user) => {
-      if (user) {
-        setLogOutStatus(true);
-      } else {
-        setLogOutStatus(false);
-      }
+      setLogOutStatus(user ? true : false)
     })
 
     return () => manageAuth();
-  }, [logOutStatus])
-
-  console.log(getAuth())
+  }, [logInStatus])
 
   return (
     <Wrapper>
@@ -61,92 +27,37 @@ export default function Header() {
         </svg>
       </Link>
 
-      {/* <AuthBlockStatus /> */}
-      {/* {getAuth().currentUser ? <AuthBlockStatus /> : <Link to="/registPage">Log in</Link>} */}
-      {/* {(user) ? <AuthBlockStatus /> : null} */}
-      {logOutStatus ? <AuthBlockStatus /> : <Link to="/registPage">Log in</Link>}
+      {logInStatus ? <AuthBlockStatus /> : <Link to="/registPage">Log in</Link>}
     </Wrapper>
   )
 }
 
-function getUserName() {
-  return getAuth().currentUser.displayName;
-}
-
-function getProfilePicUrl() {
-  return getAuth().currentUser.photoURL || '/images/profile_placeholder.png';
-}
-
 const Wrapper = styled.header`
-  max-height: 7vmin;
+  //max-height: 7vmin;
   display: flex;
+  justify-content: space-between;
+  padding: 3vmin 4vmin;
   
   svg {
     fill: #e50914;
-    width: 20%;
+    width: 100px;
   }
 
   & > div {
     margin-left: auto;
   }
-`
 
-function AuthBlockStatus() {
-  const [logOutStatus, setLogOutStatus] = useState(false);
-  const [userDate, setUserDate] = useState({
-    userName: null,
-    userPicElem: null,
-  })
+  a {
+    display: block;
+    height: 100%;
+  }
 
-  useEffect(() => {
-    const manageAuth = getAuth().onAuthStateChanged((user) => {
-      if (user) {
-        setUserDate({
-          userName: getUserName(),
-          userPicElem: getProfilePicUrl(),
-        })
-      } else {
-        setUserDate({
-          userName: null,
-          userPicElem: null,
-        })
-      }
-    });
-
-    return () =>  manageAuth();
-  }, [userDate.userName, userDate.userPicElem]);
-
-  return (
-    <Wrapper2 onClick={(e) => setLogOutStatus(!logOutStatus ? true : false)}>
-      <Picture image={userDate.userPicElem} />
-      <div id="user-name">{userDate.userName}</div>
-        {logOutStatus 
-        ? <LogOutBlock onClick={() => {
-          signOut(getAuth());  
-        }}>Log out</LogOutBlock> 
-        : null}
-    </Wrapper2>
-  )
-}
-
-const LogOutBlock = styled.div`
-  position: absolute;
-  top: 100%;
-  cursor: pointer;
-`
-
-const Picture = styled.div`
-  background-image: ${(props) => 'url(' + props.image + ')'};
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-`
-
-const Wrapper2 = styled.div`
-  display: flex;
-  align-items: center;
-  position: relative;
+  a:last-of-type {
+    display: block;
+    background: #e50914;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    padding: 1vmin 2vmin;
+  }
 `
