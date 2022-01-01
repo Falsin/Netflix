@@ -8,7 +8,7 @@ import {
 import { useState } from 'react';
 import styled from 'styled-components';
 import Header from '../commonTemplate/Header';
-/* import app from '../Firebase'; */
+import app from '../Firebase';
 
 export default function RegistPage(params) {
   return (
@@ -49,6 +49,14 @@ function RegistContainer() {
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  color: white;
+
+  input, button {
+    margin-bottom: 4vmin;
+    padding: 2vmin;
+  }
   
   fieldset {
     padding-top: 20px;
