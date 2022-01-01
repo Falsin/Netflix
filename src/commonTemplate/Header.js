@@ -27,10 +27,17 @@ export default function Header() {
         </svg>
       </Link>
 
-      {logInStatus ? <AuthBlockStatus /> : <Link to="/registPage">Log in</Link>}
+      {logInStatus ? <AuthBlockStatus /> : <RedLink to="/registPage">Log in</RedLink>}
     </Wrapper>
   )
 }
+
+const RedLink = styled(Link)`
+  background: #e50914;
+  text-decoration: none;
+  color: white;
+  padding: 1vmin 2vmin;
+`
 
 const Wrapper = styled.header`
   //max-height: 7vmin;
@@ -52,12 +59,10 @@ const Wrapper = styled.header`
     height: 100%;
   }
 
-  a:last-of-type {
-    display: block;
+/*   a:last-of-type {
     background: #e50914;
-    height: 100%;
     text-decoration: none;
     color: white;
     padding: 1vmin 2vmin;
-  }
+  } */
 `

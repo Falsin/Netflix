@@ -48,8 +48,8 @@ const LogOutBlock = styled.div`
   position: absolute;
   top: 100%;
   cursor: pointer;
-  display: block;
-  background: #e50914;
+  /* display: block;
+  background: #e50914; */
 `
 
 const Picture = styled.div`
