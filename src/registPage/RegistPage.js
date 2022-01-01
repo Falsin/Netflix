@@ -53,30 +53,48 @@ const Wrapper = styled.div`
   justify-content: center;
   color: white;
 
-  input, button {
-    margin-bottom: 4vmin;
-    padding: 2vmin;
-    border-radius: 2px;
-  }
-  
-  fieldset {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    border: none;
-
+  form {
     button {
-      background: red;
+      background: white;
+      width: 45%;
+      cursor: pointer;
+      //display: block;
+      //display: inline-block;
     }
 
-    &::before {
-      content: '${(props) => props.err}';
-      color: ${props => props.err ? props.color : 'green'};
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
+    input, button {
+      margin-bottom: 4vmin;
+      padding: 2vmin;
+      border-radius: 2px;
+      border: none;
+      outline: none;
+    }
+
+    & > button:last-of-type {
+      //margin-left: auto;
+      margin-left: 10%;
+    }
+
+    fieldset {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: none;
+
+      button {
+        background: red;
+        width: 100%;
+      }
+
+      &::before {
+        content: '${(props) => props.err}';
+        color: ${props => props.err ? props.color : 'green'};
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 `
