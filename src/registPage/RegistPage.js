@@ -7,6 +7,7 @@ import {
 } from 'firebase/auth';
 import { useState } from 'react';
 import styled from 'styled-components';
+import Footer from '../commonTemplate/Footer';
 import Header from '../commonTemplate/Header';
 import app from '../Firebase';
 
@@ -15,7 +16,7 @@ export default function RegistPage(params) {
     <>
       <Header />
       <RegistContainer />
-      <footer></footer>
+      <Footer />
     </>
   )
 }
@@ -58,8 +59,6 @@ const Wrapper = styled.div`
       background: white;
       width: 45%;
       cursor: pointer;
-      //display: block;
-      //display: inline-block;
     }
 
     input, button {
@@ -71,7 +70,6 @@ const Wrapper = styled.div`
     }
 
     & > button:last-of-type {
-      //margin-left: auto;
       margin-left: 10%;
     }
 

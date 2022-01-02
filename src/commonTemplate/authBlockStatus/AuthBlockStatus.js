@@ -36,9 +36,7 @@ export default function AuthBlockStatus() {
       <Picture image={userDate.userPicElem} />
       <div id="user-name">{userDate.userName}</div>
         {logOutStatus 
-        ? <LogOutBlock onClick={() => {
-          signOut(getAuth());  
-        }}>Log out</LogOutBlock> 
+        ? <LogOutBlock onClick={() => signOut(getAuth())}>Log out</LogOutBlock> 
         : null}
     </Wrapper>
   )
@@ -48,8 +46,6 @@ const LogOutBlock = styled.div`
   position: absolute;
   top: 100%;
   cursor: pointer;
-  /* display: block;
-  background: #e50914; */
 `
 
 const Picture = styled.div`
@@ -60,12 +56,14 @@ const Picture = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-right: 2vmin;
 `
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  color: white;
 `
 
 function getUserName() {
