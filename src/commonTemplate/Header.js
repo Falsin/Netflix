@@ -40,9 +40,13 @@ const RedLink = styled(Link)`
 `
 
 const Wrapper = styled.header`
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   padding: 3vmin 4vmin;
+  position: absolute; //
+  width: 100%;        //
+  top: 0;             //
   
   svg {
     fill: #e50914;

@@ -53,6 +53,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   color: white;
+  margin-top: 14vmin;
+  margin-bottom: 6vmin;
 
   form {
     button {

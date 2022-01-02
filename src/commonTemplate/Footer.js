@@ -11,7 +11,7 @@ export default function Footer() {
   )
 } 
 
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
   color: white;
   padding-left: 5%;
   padding-right: 5%;
@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   border-top: 8px solid #222222;
+  margin-bottom: 6vmin;
 
   a {
     text-decoration: none;
