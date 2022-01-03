@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.e243bc8f.chunk.css",
-    "main.js": "./static/js/main.98168d63.chunk.js",
-    "main.js.map": "./static/js/main.98168d63.chunk.js.map",
+    "main.js": "./static/js/main.e574d1c7.chunk.js",
+    "main.js.map": "./static/js/main.e574d1c7.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.0e7f80ec.js",
     "runtime-main.js.map": "./static/js/runtime-main.0e7f80ec.js.map",
     "static/js/2.3078eb96.chunk.js": "./static/js/2.3078eb96.chunk.js",
@@ -11,8 +11,10 @@
     "static/css/main.e243bc8f.chunk.css.map": "./static/css/main.e243bc8f.chunk.css.map",
     "static/js/2.3078eb96.chunk.js.LICENSE.txt": "./static/js/2.3078eb96.chunk.js.LICENSE.txt",
     "static/media/backgroundForCover.71c50adc.jpg": "./static/media/backgroundForCover.71c50adc.jpg",
+    "static/media/download-icon.1ce72c89.gif": "./static/media/download-icon.1ce72c89.gif",
     "static/media/laptopBackground.0049bc70.png": "./static/media/laptopBackground.0049bc70.png",
     "static/media/laptopForWatchBlock.8e6539e8.png": "./static/media/laptopForWatchBlock.8e6539e8.png",
+    "static/media/posterForDownloadBlock.347f4ee3.png": "./static/media/posterForDownloadBlock.347f4ee3.png",
     "static/media/smartphone-for-downloadBlock.063578d5.jpg": "./static/media/smartphone-for-downloadBlock.063578d5.jpg",
     "static/media/video-for-enjoyBlock.053994fc.m4v": "./static/media/video-for-enjoyBlock.053994fc.m4v",
     "static/media/video-for-watchBlock.b27bb59e.m4v": "./static/media/video-for-watchBlock.b27bb59e.m4v"
@@ -21,6 +23,6 @@
     "static/js/runtime-main.0e7f80ec.js",
     "static/js/2.3078eb96.chunk.js",
     "static/css/main.e243bc8f.chunk.css",
-    "static/js/main.98168d63.chunk.js"
+    "static/js/main.e574d1c7.chunk.js"
   ]
 }
