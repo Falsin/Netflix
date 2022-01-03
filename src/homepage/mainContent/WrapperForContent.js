@@ -25,7 +25,7 @@ const Wrapper = styled.section`
   .animationContainer {
     position: relative;
 
-    img {
+    & > img {
       position: relative;
       width: 100%;
       height: auto;
