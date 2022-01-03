@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import img from "../../images/laptopBackground.png";
-import video from "../../videos/video-for-enjoyBlock.m4v"
+import video from "../../videos/video-for-enjoyBlock.m4v";
+import Wrapper from "./WrapperForContent";
 
 export default function EnjoyBlock(params) {
   return (
@@ -21,7 +21,7 @@ export default function EnjoyBlock(params) {
   )
 }
 
-const Wrapper = styled.section`
+/* const Wrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 70%;
@@ -31,6 +31,7 @@ const Wrapper = styled.section`
   margin-bottom: 6vmin;
 
   & > .textContainer {
+    margin-top: 6vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,4 +71,4 @@ const Wrapper = styled.section`
     flex-grow: 1;
     min-width: 200px;
   }
-`
+` */

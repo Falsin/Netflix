@@ -1,4 +1,5 @@
 import Cover from "./Cover";
+import DownloadBlock from "./WatchBlock";
 import EnjoyBlock from "./EnjoyBlock";
 
 export default function MainContent() {
@@ -6,6 +7,7 @@ export default function MainContent() {
     <div>
       <Cover />
       <EnjoyBlock />
+      <DownloadBlock />
     </div>
   )
 }
