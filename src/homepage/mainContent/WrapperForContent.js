@@ -12,12 +12,10 @@ const Wrapper = styled.section`
   padding-top: 2vmin;
 
   & > .textContainer {
-    //margin-top: 6vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 2vmin;
 
     h2 {
       font-size: 8vmin;
@@ -26,7 +24,6 @@ const Wrapper = styled.section`
 
   .animationContainer {
     position: relative;
-    margin-left: 2vmin;
 
     img {
       position: relative;
@@ -48,6 +45,8 @@ const Wrapper = styled.section`
   }
 
   & > * {
+    margin-right: 2vmin;
+    margin-left: 2vmin;
     width: 45%;
     flex-grow: 1;
     min-width: 200px;

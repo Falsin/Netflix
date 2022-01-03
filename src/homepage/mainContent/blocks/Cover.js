@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import image from "../../images/backgroundForCover.jpg"
+import image from "../../../images/backgroundForCover.jpg"
 
 export default function Cover(params) {
   return (
