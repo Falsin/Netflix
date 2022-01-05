@@ -36,18 +36,26 @@ const StyledWrapper = styled(Wrapper)`
       border-radius: 10px;
       top: 70%;
       position: absolute;
-      width: 70%;
-      height: 20%;
+      min-width: 70%;
+      padding-top: 2vmin;
+      padding-bottom: 2vmin;
       border: solid rgb(64, 64, 64) 2px;
       background: black;
-      //height: 0;
 
       img {
-        height: 80%;
+        height: 8vmin;
+        margin-left: 2vmin;
       }
 
       div {
+        margin-left: 2vmin;
+
+        h4 {
+          font-size: 2.5vmin;
+        }
+
         p {
+          font-size: 2vmin;
           color: #0071eb; 
         }
       }
@@ -57,8 +65,13 @@ const StyledWrapper = styled(Wrapper)`
         background-image: url(${downloadIcon});
         height: 6vmin;
         width: 6vmin;
-        border: solid red 1px;
         display: block;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        border-radius: 50%;
+        right: 2vmin;
       }
     }
   }

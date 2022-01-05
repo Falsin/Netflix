@@ -51,6 +51,11 @@ const Wrapper = styled.section`
     flex-grow: 1;
     min-width: 200px;
   }
+
+  @media screen and (max-width: 1000px) {
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+  }
 `
 
 export default Wrapper;
