@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.e243bc8f.chunk.css",
-    "main.js": "./static/js/main.6972bfe9.chunk.js",
-    "main.js.map": "./static/js/main.6972bfe9.chunk.js.map",
+    "main.js": "./static/js/main.13207fd0.chunk.js",
+    "main.js.map": "./static/js/main.13207fd0.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.0e7f80ec.js",
     "runtime-main.js.map": "./static/js/runtime-main.0e7f80ec.js.map",
     "static/js/2.3078eb96.chunk.js": "./static/js/2.3078eb96.chunk.js",
@@ -12,6 +12,7 @@
     "static/js/2.3078eb96.chunk.js.LICENSE.txt": "./static/js/2.3078eb96.chunk.js.LICENSE.txt",
     "static/media/backgroundForCover.71c50adc.jpg": "./static/media/backgroundForCover.71c50adc.jpg",
     "static/media/download-icon.1ce72c89.gif": "./static/media/download-icon.1ce72c89.gif",
+    "static/media/imageForKidsBlock.7e9c0c2f.png": "./static/media/imageForKidsBlock.7e9c0c2f.png",
     "static/media/laptopBackground.0049bc70.png": "./static/media/laptopBackground.0049bc70.png",
     "static/media/laptopForWatchBlock.8e6539e8.png": "./static/media/laptopForWatchBlock.8e6539e8.png",
     "static/media/posterForDownloadBlock.347f4ee3.png": "./static/media/posterForDownloadBlock.347f4ee3.png",
@@ -23,6 +24,6 @@
     "static/js/runtime-main.0e7f80ec.js",
     "static/js/2.3078eb96.chunk.js",
     "static/css/main.e243bc8f.chunk.css",
-    "static/js/main.6972bfe9.chunk.js"
+    "static/js/main.13207fd0.chunk.js"
   ]
 }
