@@ -7,10 +7,6 @@ import downloadIcon from "../../../images/download-icon.gif"
 export default function DownloadBlock() {
   return (
     <StyledWrapper>
-      <div className="textContainer">
-        <h2>Download your shows to watch offline.</h2>
-        <p>Save your favorites easily and always have something to watch.</p>
-      </div>
       <div className="animationContainer">
         <img src={img}/>
         <div>
@@ -21,11 +17,17 @@ export default function DownloadBlock() {
           </div>
         </div>
       </div>
+      <div className="textContainer">
+        <h2>Download your shows to watch offline.</h2>
+        <p>Save your favorites easily and always have something to watch.</p>
+      </div>
     </StyledWrapper>
   )
 }
 
 const StyledWrapper = styled(Wrapper)`
+  flex-wrap: wrap-reverse;
+
   .animationContainer {
     display: flex;
     justify-content: center;
