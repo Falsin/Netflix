@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import uniqid from "uniqid";
+import Option from "./componentsForQuestionsBlock/Option";
 
-export default function Questions(params) {
+export default function Questions() {
   const [activeElemId, setActiveElemId] = useState(null);
-
-  let headlinesAndDescriptions = {
+  const headlinesAndDescriptions = {
     "What is Netflix?": "Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!",
     "How much does Netflix cost?" : "Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from RUB599 to RUB999 a month. No extra costs, no contracts.",
     "Where can I watch?": "Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles. You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.",
@@ -15,7 +14,7 @@ export default function Questions(params) {
   }
 
   function createOptionsForList(obj) {
-    return Object.entries(obj).map((elem, id) => Option(elem, id, activeElemId, setActiveElemId));
+    return Object.entries(obj).map(elem => Option(elem, activeElemId, setActiveElemId));
   }
 
   return (
@@ -25,26 +24,6 @@ export default function Questions(params) {
       {createOptionsForList(headlinesAndDescriptions).map(elem => elem)}
       </ul>
     </Wrapper>
-  )
-}
-
-function Option(arr, id, activeId, func) {
-  const [index] = useState(id);
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    if (activeId !== index) {
-      setIsActive(false);
-    } else {
-      setIsActive(true);
-    }
-  })
-
-  return (
-    <Wrapper2 key={uniqid()} onClick={() => func(index)}>
-      <h3>{arr[0]}</h3>
-      <p className={(isActive) ? "active" : ""}>{arr[1]}</p>
-    </Wrapper2>
   )
 }
 
@@ -71,20 +50,6 @@ const Wrapper = styled.section`
   @media screen and (max-width: 600px) {
     ul {
       width: 100%;
-    }
-  }
-`
-
-const Wrapper2 = styled.li`
-  margin-top: 2vmin;
-  padding: 2vmin;
-  background: #222222;
-
-  p {
-    display: none;
-
-    &.active {
-      display: block;
     }
   }
 `
